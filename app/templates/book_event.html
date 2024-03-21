@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Booking</title>
+    <link rel="stylesheet" type="text/css" href="/static/booking_styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>{{ event.name }}</h1>
+        {% if header %}
+        <h2>{{ header2 }}</h2>
+        {% endif %}
+
+        <p class="card-text">Event Details: {{ event.details }}</p>
+        <form action='/event/book_event?event_id={{ event.id }}&event_name={{ event.name }}' method="post">
+            <div class="form-group">
+                <label for="tickets">Number of Tickets</label>
+                <input type="number" id="number_of_tickets" name="number_of_tickets" placeholder="Enter Number of Tickets" min="1" required>
+            </div>
+            <button type="submit" class="submit-btn">Book Event</button>
+        </form>
+        
+    </div>
+</body>
+</html>

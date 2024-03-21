@@ -1,0 +1,127 @@
+/* Navbar */
+.navbar {
+    background-color: #343a40; /* Dark background color */
+  }
+  
+  .navbar-brand {
+    color: #ffffff; /* White text color */
+    font-weight: bold; /* Bold font weight */
+  }
+  
+  .navbar-brand:hover {
+    color: #ffffff; /* White text color on hover */
+  }
+  
+  .navbar-nav .nav-item .nav-link {
+    color: #ffffff; /* White text color */
+  }
+  
+  .navbar-nav .nav-item .nav-link:hover {
+    color: #f8f9fa; /* Lighter text color on hover */
+  }
+  
+  .navbar-toggler {
+    border-color: #ffffff; /* White border color */
+  }
+  
+  .navbar-toggler-icon {
+    background-color: #ffffff; /* White background color for toggler icon */
+  }
+  
+  /* Active link */
+  .navbar-nav .nav-item .nav-link.active {
+    background-color: #6c757d; /* Darker background color for active link */
+    color: #ffffff; /* White text color for active link */
+  }
+  
+  /* Dropdown menu */
+  .dropdown-menu {
+    background-color: #343a40; /* Dark background color for dropdown menu */
+  }
+  
+  .dropdown-item {
+    color: #ffffff; /* White text color for dropdown items */
+  }
+  
+  .dropdown-item:hover {
+    background-color: #6c757d; /* Darker background color for dropdown items on hover */
+    color: #ffffff; /* White text color for dropdown items on hover */
+  }
+  
+  /* Right-aligned dropdown menu */
+  .navbar-nav.ml-auto .dropdown-menu {
+    right: 0; /* Align dropdown menu to the right */
+  }
+  
+  /* Body */
+body {
+  font-family: Arial, sans-serif; /* Set font family */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+/* Navigation bar */
+.navbar {
+  background-color: #343a40; /* Dark background color */
+  color: #ffffff; /* White text color */
+  padding: 10px 0; /* Add padding to top and bottom */
+}
+
+.navbar-brand {
+  font-size: 1.5rem; /* Increase font size */
+  font-weight: bold; /* Bold font weight */
+  text-decoration: none; /* Remove underline */
+}
+
+.navbar-brand:hover {
+  color: #ffffff; /* White text color on hover */
+}
+
+/* Container */
+.container {
+  margin-top: 50px; /* Add top margin */
+  text-align: center; /* Center-align text */
+}
+
+.container h1 {
+  font-size: 2.5rem; /* Increase font size */
+  margin-bottom: 20px; /* Add bottom margin */
+}
+
+.container p {
+  font-size: 1.1rem; /* Increase font size */
+}
+
+/* Account create link */
+.account_create {
+  text-align: center; /* Center-align text */
+  margin-top: 20px; /* Add top margin */
+}
+
+.account_create a {
+  color: #007bff; /* Blue link color */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Bold font weight */
+}
+
+.account_create a:hover {
+  text-decoration: underline; /* Underline link on hover */
+}
+
+/* My page link */
+.my_page_link {
+  text-align: center; /* Center-align text */
+  margin-top: 20px; /* Add top margin */
+}
+
+.my_page_link a {
+  color: #007bff; /* Blue link color */
+  text-decoration: none; /* Remove underline */
+  font-weight: bold; /* Bold font weight */
+}
+
+.my_page_link a:hover {
+  text-decoration: underline; /* Underline link on hover */
+}
+
+

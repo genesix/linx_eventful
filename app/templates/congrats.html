@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Congratulations on Booking Event!</title>
+    <link rel="stylesheet" type="text/css" href="/static/congrats_styles.css">
+    
+</head>
+<body>
+    <div class="container">
+        {% include 'navbar.html' %}
+        <h1>{{  header  }}</h1>
+        <div class="message">
+            <p>Your event has been successfully booked. Check your mail for your QR code!</p>
+        </div>
+
+        <!-- Notification Form -->
+        <h2>Set Notification for Booked Event</h2>
+        <form action='/event/schedule_notification?event_id={{ event.id}}&reminder_day={{ reminder_day}}&message={{ message}}' method="post">
+            <div class="form-group">
+                <label for="notification_message">Notification Message</label>
+                <textarea id="notification_message" name="message" placeholder="Enter Notification Message" required></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="date" class="form-label">Date</label>
+                <input type="datetime-local" class="form-control" id="date" name="reminder_day" required>
+            </div>
+            
+            <button type="submit" class="submit-btn">Set Notification</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="/static/uspc.css">
+</head>
+<body>
+    {% include 'navbar.html' %}
+    <div class="container">
+        <h1>{{ title }}</h1>
+        <p>{{ message }}</p>
+
+        <!-- Create Event Button -->
+        <a href="/event/create_event" class="btn btn-success mb-3">Create Event</a>
+
+        <!-- My Events Button -->
+        <a href="/event/my_events" class="btn btn-primary mb-3">My Events</a>
+
+        <form action="/user/attendees/{{ event_id }}" method="get">
+            <label for="event_id">Search for attendees by event ID:</label><br>
+            <input type="text" id="event_id" name="event_id" placeholder="Enter event ID" required><br><br>
+            <button type="submit">Search</button>
+        </form>
+
+        <!-- Logout Button -->
+        <form action="/auth/logout" method="get" style="display: inline;">
+            <button type="submit" class="btn btn-danger mb-3">Logout</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Create Event</title>
+    <link rel="stylesheet" type="text/css" href="/static/create_event.css" />
+  </head>
+  <body>
+    {% include 'navbar.html' %}
+    <div class="container">
+      <h1>Create Event</h1>
+      <form action="/event/event_create" method="post">
+        <div class="mb-3">
+          <label for="name" class="form-label">Event Name</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="date" class="form-label">Date</label>
+          <input
+            type="datetime-local"
+            class="form-control"
+            id="date"
+            name="date"
+            required
+          />
+        </div>
+
+        <div class="mb-3">
+          <label for="available_tickets" class="form-label"
+            >Available Tickets</label
+          >
+          <input
+            type="number"
+            class="form-control"
+            id="available_tickets"
+            name="available_tickets"
+            required
+          />
+        </div>
+        <div class="mb-3">
+          <label for="details" class="form-label">Event Details</label>
+          <textarea
+            class="form-control"
+            id="details"
+            name="details"
+            rows="3"
+            required
+          ></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Create Event</button>
+      </form>
+
+      <div>
+        <a href="/user/my_page">My Page</a>
+      </div>
+    </div>
+  </body>
+</html>

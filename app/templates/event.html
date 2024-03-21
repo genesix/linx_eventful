@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Discover</title>
+    <link rel="stylesheet" type="text/css" href="/static/event.css">
+</head>
+
+<body>
+    {% include 'navbar.html' %}
+    <div class="container">
+        <h1>Events</h1>
+
+        <!-- Search Box -->
+        <form action="/event/events_by_name" method="get" class="mb-3">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search for event by name" name="event_name" id="'event_name">
+                <button class="btn btn-primary" type="submit">Search</button>
+            </div>
+        </form>
+
+        <!-- Create Event Button -->
+        <a href="/event/create_event" class="btn btn-success mb-3">Create Event</a>
+
+        <div class="row">
+            {% for event in events %}
+            <div class="col-md-4">
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ event.name }}</h5>
+                        <p class="card-text">id: {{ event.id }}</p>
+                        <p class="card-text">Date: {{ event.date }}</p>
+                        <p class="card-text">Hosted By: {{ event.creator_name }}</p>
+                        <a href="/event/get_link?event_id={{ event.id}}" class="card-link">Event Link</a>
+                        <a href="/event/book_event?event_id={{ event.id }}&event_name={{ event.name }}">Checkout Event</a>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        <a href="/event/my_events" class="btn btn-success mb-3">My Events</a>
+    </div>
